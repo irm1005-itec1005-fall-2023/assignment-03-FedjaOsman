@@ -62,9 +62,10 @@ let count = 0;
 function addToDoItem(text) {
   // Implement the logic to add a task here
   //increment the count so each task has a unique id
-  newcount = count++;
-  const todoId = {
-    id: newcount,
+  
+  count++;
+  let todoId = {
+    id: count,
     text: text,
     completed: false,
   }
@@ -129,7 +130,7 @@ function clearCompletedTasks() {
   let i = 0;
   while(i < todoItems.length){
     if(todoItems[i].completed === true){
-      todoItems.pop(i);
+      todoItems.splice(i, 1);
     }else{
       i++;
     }
