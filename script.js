@@ -69,11 +69,12 @@ function addToDoItem(text) {
 // the function does not need to return anything
 function removeToDoItem(todoId) {
   // Implement the logic to add a task here
-  for(let i = 0; i <= todoItems.length; i++){
-    if(todoItems[i] === todoId.id){
-      todoItems.pop(i);
+  deleteToDoItem(todoId);
+  /*for(let i = 0; i <= todoItems.length; i++){
+    if(todoItems[i] === todoId){
+      todoItems.splice(i, 1);
     }
-  }
+  }*/
 
 }
 
@@ -102,7 +103,7 @@ function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
   for(let i = 0; i < todoItems.length; i++){
     if(todoItems[i].id === todoId){
-      todoItems.pop(1);
+        todoItems.splice(i,1);
     }
   }
   
@@ -130,4 +131,3 @@ function clearCompletedTasks() {
 //  console.log(todoItems); // This should show the todo item you added
 //  removeToDoItem(0); // This should remove the todo item with ID 0 from the array
 //  markToDoItemAsCompleted(0); // This should mark the todo item with ID 0 as completed
-  deleteToDoItem(0); // This should delete the todo item with ID 0 from the array
