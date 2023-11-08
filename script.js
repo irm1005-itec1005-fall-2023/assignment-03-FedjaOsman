@@ -37,6 +37,14 @@
 // NOTE:
 //
 // You must use the following object literal structure when creating new todo items
+
+/*Sources:
+- .splice(index, amount) - https://www.programiz.com/javascript/library/array/splice
+-
+
+*/
+
+
 // {
 //   id: 0,
 //   text: "This is a todo item",
@@ -53,7 +61,7 @@ let todoItems = [];
 function addToDoItem(text) {
   // Implement the logic to add a task here
   const todoId = {
-    //  !this will update the items id to increment by 1 for each added item
+    //  !this will update the items id to increment by 1 each new item takes the new length of the array as an id.
     id: todoItems.length,
     text: text,
     completed: false,
@@ -70,6 +78,8 @@ function addToDoItem(text) {
 function removeToDoItem(todoId) {
   // Implement the logic to add a task here
   deleteToDoItem(todoId);
+
+  //old stuff
   /*for(let i = 0; i <= todoItems.length; i++){
     if(todoItems[i] === todoId){
       todoItems.splice(i, 1);
