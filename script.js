@@ -53,6 +53,7 @@
 
 // Initialise an empty array with the variable name todoItems
 let todoItems = [];
+let count = 0;
 
 // Function to add a todo to the list
 // It should accept a string as a parameter (text of the todo item)
@@ -60,9 +61,10 @@ let todoItems = [];
 // the function does not need to return anything
 function addToDoItem(text) {
   // Implement the logic to add a task here
+  //increment the count so each task has a unique id
+  newcount = count++;
   const todoId = {
-    //  !this will update the items id to increment by 1 each new item takes the new length of the array as an id.
-    id: todoItems.length,
+    id: newcount,
     text: text,
     completed: false,
   }
